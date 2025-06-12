@@ -35,7 +35,7 @@ const videoSchema = new Schema<IVideo>(
 
     },
     {
-        timestamps:true;
+        timestamps:true,
     }
 )
 

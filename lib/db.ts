@@ -13,7 +13,7 @@ if (!cashed){
 }
 
 export async function connectToDatabase(){
-    if( cached.conn ){
+    if( cashed.conn ){
         return cashed.conn;
     }
     if(!cashed.promise){
