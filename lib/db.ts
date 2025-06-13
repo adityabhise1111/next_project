@@ -1,4 +1,8 @@
-import mongoose from "mongoose";
+//This code is a MongoDB connection utility for 
+//Next.js using Mongoose, with caching to prevent 
+// multiple connections during hot reloads.
+
+import mongoose from "mongoose"; 
 
 const MONGODB_URI = process.env.MONGODB_URI! ;
 
@@ -7,7 +11,7 @@ if(!MONGODB_URI){
 }
 
 let cashed = global.mongoose
-
+ 
 if (!cashed){
     cashed = global.mongoose ={conn: null,promise:null}
 }
