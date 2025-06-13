@@ -17,7 +17,6 @@ export const authOptions: NextAuthOptions = {
             async authorize(credentials) {
                 if (!credentials?.email || !credentials?.password) {
                     throw new Error("missing mail or pass ")
-
                 }
                 try {
                     await connectToDatabase();
@@ -67,7 +66,7 @@ export const authOptions: NextAuthOptions = {
     },
     session:{
         strategy:"jwt",
-        maxAge: 30 * 24 * 60 * 60 * 1000,
+        maxAge: 30 * 24 * 60 * 60,
     },
     secret: process.env.AUTH_SECRET
 };
